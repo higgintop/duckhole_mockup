@@ -1,0 +1,102 @@
+//**************************************************
+// Color Variables
+//**************************************************
+$header-nav-bg-color: #E1E2DE;
+$header-nav-link-color: #6D645E;
+$header-nav-icon-bg-color: #74B358;
+$header-nav-input-text-color: #78716a;
+//**************************************************
+// Mixin Definitions
+//**************************************************
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+//**************************************************
+// General Styles 
+//**************************************************
+
+//**************************************************
+// Top Header Navigation (.header-nav)
+//**************************************************
+.header-nav {
+   height: 64px;
+   background-color: $header-nav-bg-color;
+   padding-left: 213px; //???
+
+   .pull-left {
+   	float: left;
+   	@include vertical-align;
+
+   	a, span{
+   		text-decoration: none;
+   		font-family: proxima-nova-condensed;
+   		text-transform: uppercase;
+			color: $header-nav-link-color;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 22px;
+   	}
+   	span {
+   		padding: 0 5px;
+   	}
+   }
+
+   .pull-right {
+   	float: right;
+   	@include vertical-align;
+
+   	a {
+   		text-decoration: none;
+   		font-family: proxima-nova-condensed;
+   		text-transform: uppercase;
+			color: $header-nav-link-color;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 22px;
+   	}
+
+   	.login-register-link::after, .cart-link{
+   		content: '';
+      display: inline-block;
+			background-repeat: no-repeat;
+			background-color: $header-nav-icon-bg-color;
+			background-position:50% 50%;
+			width: 38px;
+			height: 38px;
+			border-radius: 50%;
+			vertical-align: middle;
+   	}
+
+   	.login-register-link::after {
+			background-image: url('../img/login-icon.png');
+			margin: 0 15px 0;
+   	}
+
+   	.cart-link {
+      background-image: url('../img/cart-icon.png');
+   	}
+
+   	input {
+   		margin: 0 15px 0;
+   		padding: 0 10px 0;
+   		width: 150px;
+      height: 34px;
+      font-family: Adelle;
+			color: $header-nav-input-text-color;
+			font-size: 13px;
+			font-style: italic;
+			line-height: 22px;
+			text-align: left;
+			background:  url('../img/search-icon.png'), linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+			background-repeat: no-repeat;
+			background-position: 95% 50%;
+			border: none;
+   	}
+   }
+
+}
