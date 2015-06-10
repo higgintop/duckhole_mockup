@@ -256,26 +256,29 @@ header {
 			background-position: 95% 50%;
 			border: none;
 		}
-		.login-register-link, .cart-link {
-			content: '';
-      display: inline-block;
-			background-repeat: no-repeat;
-			background-color: $header-nav-icon-bg-color;
-			background-position:50% 50%;
-			width: 38px;
-			height: 38px;
-			border-radius: 50%;
-			vertical-align: middle;
-			margin: 0 auto;
-		}
+		.icon-links {
+			text-align: center;
+			padding-top: 10px;
+			.login-register-link, .cart-link {
+				content: '';
+	      display: inline-block;
+				background-repeat: no-repeat;
+				background-color: $header-nav-icon-bg-color;
+				background-position:50% 50%;
+				width: 38px;
+				height: 38px;
+				border-radius: 50%;
+				vertical-align: middle;
+				margin: 0 5px 0;
+			}
 
-		.login-register-link {
-			background-image: url('../img/login-icon.png');
-			margin: 0 15px 0;
-		}
-		.cart-link {
-			background-image: url('../img/cart-icon.png');
-		}
+			.login-register-link {
+				background-image: url('../img/login-icon.png');
+			}
+			.cart-link {
+				background-image: url('../img/cart-icon.png');
+			}
+	  }
 	}
 }
 
@@ -424,12 +427,16 @@ footer {
 			display: inline-block;
 			list-style: none;
 			font-family: proxima-nova-condensed;
-			color: $footer-link-color;
 			font-size: 1em;
 			font-weight: 600;
 			line-height: 1.375; 
 			padding: 0 10px 0;
 			margin-bottom: 0;
+
+			a {
+				text-decoration: none;
+        color: $footer-link-color;
+			}
 
 			&:first-child {
 				vertical-align: middle;
@@ -443,7 +450,7 @@ footer {
 			&::after {
 				content: '';
 				border-right: 1px solid $footer-link-color;
-				padding-left: 50px;
+				padding-left: 25px;
 			}
 
 			&:last-child::after {
