@@ -5,6 +5,8 @@ $header-nav-bg-color: #E1E2DE;
 $header-nav-link-color: #6D645E;
 $header-nav-icon-bg-color: #74B358;
 $header-nav-input-text-color: #78716a;
+$header-font-color: #f6f7f4;
+$header-secondary-font-color: #fff;
 //**************************************************
 // Mixin Definitions
 //**************************************************
@@ -19,20 +21,24 @@ $header-nav-input-text-color: #78716a;
 //**************************************************
 // General Styles 
 //**************************************************
+body {
+	max-width: 1227px;
+	margin: 0 auto;
+}
 
 //**************************************************
 // Top Header Navigation (.header-nav)
 //**************************************************
 .header-nav {
-   height: 64px;
-   background-color: $header-nav-bg-color;
-   padding-left: 213px; //???
+	height: 64px;
+  background-color: $header-nav-bg-color;
+  padding-left: 213px; //???
 
-   .pull-left {
-   	float: left;
+  .pull-left {
+  	float: left;
    	@include vertical-align;
 
-   	a, span{
+   	a, span {
    		text-decoration: none;
    		font-family: proxima-nova-condensed;
    		text-transform: uppercase;
@@ -41,12 +47,13 @@ $header-nav-input-text-color: #78716a;
       font-weight: 600;
       line-height: 22px;
    	}
+
    	span {
    		padding: 0 5px;
    	}
-   }
+  }
 
-   .pull-right {
+  .pull-right {
    	float: right;
    	@include vertical-align;
 
@@ -97,6 +104,56 @@ $header-nav-input-text-color: #78716a;
 			background-position: 95% 50%;
 			border: none;
    	}
-   }
-
+  }
 }
+
+//**************************************************
+// Header Content
+//**************************************************
+header {
+	background-image: url('/img/header-background.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 325px;
+	padding: 100px 0 0 330px; //???
+
+	h1 {
+		margin: 0;
+		font-family: proxima-nova-condensed;
+		text-transform: uppercase;
+		color: $header-font-color;
+    font-size: 5.936em;
+    font-weight: 900;
+	}
+
+	p {
+		margin: 0;
+		font-family: adelle;
+		color: $header-secondary-font-color;
+		font-size:  1.375em; 
+    font-style: italic;
+
+    span {
+    	display: block;
+    }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
