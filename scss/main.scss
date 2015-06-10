@@ -7,6 +7,7 @@ $header-nav-icon-bg-color: #74B358;
 $header-nav-input-text-color: #78716a;
 $header-font-color: #f6f7f4;
 $header-secondary-font-color: #fff;
+$side-nav-background-color: #47423d;
 //**************************************************
 // Mixin Definitions
 //**************************************************
@@ -24,6 +25,7 @@ $header-secondary-font-color: #fff;
 body {
 	max-width: 1227px;
 	margin: 0 auto;
+	position: relative; // for side nav
 }
 
 //**************************************************
@@ -32,7 +34,7 @@ body {
 .header-nav {
 	height: 64px;
   background-color: $header-nav-bg-color;
-  padding-left: 213px; //???
+  padding-left: 220px; //???
 
   .pull-left {
   	float: left;
@@ -115,8 +117,8 @@ header {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	height: 325px;
-	padding: 100px 0 0 330px; //???
+	height: 255px;
+	padding: 80px 0 0 330px; //???
 
 	h1 {
 		margin: 0;
@@ -140,9 +142,67 @@ header {
 	}
 }
 
+//**************************************************
+// Floating Side Navigation
+//**************************************************
+.side-nav {
+	display: inline-block;
+	width:  190px;
+	height:  440px;
+	position: fixed;
+	background: linear-gradient(rgba(71, 66, 61, 0.7), rgba(71, 66, 61, 0.7)), url('../img/side-nav-under-image.png');
+	background-repeat: no-repeat;
+	background-size: 100% 80%;
+	background-position: 1% 150%;
+	margin: 17px 0 0 17px;
+	font-family: proxima-nova-condensed;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			border-bottom: 1px solid white;
+			text-transform: uppercase;
+			color: white;
+			font-size: 12px;
+			line-height: 30px;
+			height: 30px;
+			padding-left: 8px;
+
+			&:first-child {
+				background-color: $side-nav-background-color;
+				height: 163px;
+				padding: 0;
+			}
+
+			&:last-child {
+				border-bottom: none;
+				height: 50px;
+			}
+
+			a {
+				text-decoration: none;
+				color: white;
 
 
-
+				img {
+					width: 20px;
+				  height: 27px;
+				  float: right;
+				}
+				.logo {
+					width: initial;
+					height: initial;
+					float: none;
+					margin-top: 25px;
+					margin-left: 25px;
+				}
+			}
+		}
+	}
+}
 
 
 
