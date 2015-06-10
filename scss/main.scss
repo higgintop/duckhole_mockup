@@ -1,6 +1,7 @@
 //**************************************************
 // Color Variables
 //**************************************************
+$main-background-color: #FBFBFB;
 $header-nav-bg-color: #E1E2DE;
 $header-nav-link-color: #6D645E;
 $header-nav-icon-bg-color: #74B358;
@@ -8,6 +9,9 @@ $header-nav-input-text-color: #78716a;
 $header-font-color: #f6f7f4;
 $header-secondary-font-color: #fff;
 $side-nav-background-color: #47423d;
+$h2-color: #6d645e;
+$main-text-color: #6d645e;
+$image-tagline-text-color: #47423d;
 //**************************************************
 // Mixin Definitions
 //**************************************************
@@ -26,6 +30,7 @@ body {
 	max-width: 1227px;
 	margin: 0 auto;
 	position: relative; // for side nav
+	background-color: $main-background-color;
 }
 
 //**************************************************
@@ -34,7 +39,7 @@ body {
 .header-nav {
 	height: 64px;
   background-color: $header-nav-bg-color;
-  padding-left: 220px; //???
+  padding-left: 240px; //???
 
   .pull-left {
   	float: left;
@@ -204,7 +209,50 @@ header {
 	}
 }
 
+//**************************************************
+// Main Content Area
+//**************************************************
+.content-container {
+	margin-left: 240px;
+	margin-top: 50px;
+	font-family: adelle;
+  // 2 column layout
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
 
+  .content-left {
+  	max-width: 607px;
+  	margin-right: 50px;
+
+		h2 {
+			color: $h2-color;
+			text-transform: uppercase;
+			font-family: proxima-nova-condensed;
+			font-size: 1.499em;
+		}
+
+		p {
+			font-size: 0.874em;
+			font-weight: 400;
+			line-height: 1.716;
+			color: $main-text-color;
+		}
+  }
+  .content-right {
+  	max-width: 286px;
+  	margin-top: 75px;
+
+  	.image-tagline {
+  		font-family: adelle;
+      color: $image-tagline-text-color;
+			font-size: 1em;
+			font-style: italic;
+			line-height: 1.903; 
+			text-align: center;
+  	}
+  }
+}
 
 
 
