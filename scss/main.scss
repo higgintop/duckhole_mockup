@@ -214,6 +214,69 @@ header {
 			}
 		}
 	}
+
+	.subscribe {
+		img {
+			display: inline-block;
+			width: 73px;
+			height: 73px;
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+		p {
+			display: inline-block;
+			text-transform: uppercase;
+			vertical-align: middle;
+			width: 99px;
+			font-family: proxima-nova-condensed;
+			color: #6d645e;
+			font-size: 0.78em;
+			font-weight: 600;
+			line-height: 1.618;
+			text-align: left;
+			margin: 0;
+		}
+	}
+
+	.small-menu {
+		display: none;
+		input {
+			margin: 0 15px 0;
+   		padding: 0 10px 0;
+   		width: 150px;
+      height: 34px;
+      font-family: Adelle;
+			color: $header-nav-input-text-color;
+			font-size: 13px;
+			font-style: italic;
+			line-height: 22px;
+			text-align: left;
+			background:  url('../img/search-icon.png'), linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+			background-repeat: no-repeat;
+			background-position: 95% 50%;
+			border: none;
+		}
+		.login-register-link, .cart-link {
+			content: '';
+      display: inline-block;
+			background-repeat: no-repeat;
+			background-color: $header-nav-icon-bg-color;
+			background-position:50% 50%;
+			width: 38px;
+			height: 38px;
+			border-radius: 50%;
+			vertical-align: middle;
+			margin: 0 auto;
+		}
+
+		.login-register-link {
+			background-image: url('../img/login-icon.png');
+			margin: 0 15px 0;
+		}
+		.cart-link {
+			background-image: url('../img/cart-icon.png');
+		}
+	}
 }
 
 //**************************************************
