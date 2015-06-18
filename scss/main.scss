@@ -1,24 +1,27 @@
 //**************************************************
 // Color Variables
 //**************************************************
+$primary-green: #74B358;
+$primary-text-color:#6d645e;
+$link-color: #d6d6cf;
 $main-background-color: #FBFBFB;
 $header-nav-bg-color: #E1E2DE;
-$header-nav-link-color: #6D645E;
-$header-nav-icon-bg-color: #74B358;
 $header-nav-input-text-color: #78716a;
 $header-font-color: #f6f7f4;
 $header-secondary-font-color: #fff;
 $side-nav-background-color: #47423d;
-$h2-color: #6d645e;
-$h3-color: #6d645e;
-$h4-color: #74b358;
 $h4-hover-color: #608c48;
-$span-color: #6d645e;
-$main-text-color: #6d645e;
-$image-tagline-text-color: #47423d;
+$image-tagline-text-color: $side-nav-background-color;
 $secondary-content-container-bg-color: #E2E4E0;
-$footer-link-color: #d6d6cf;
-$copyright-text-color: #d6d6cf;
+$footer-link-color: $link-color;
+$copyright-text-color: $link-color;
+
+//**************************************************
+// Font Variables
+//**************************************************
+$primary-font: proxima-nova-condensed;
+$secondary-font: adelle;
+
 //**************************************************
 // Mixin Definitions
 //**************************************************
@@ -46,7 +49,7 @@ body {
 .header-nav {
   height: 64px;
   background-color: $header-nav-bg-color;
-  padding-left: 240px; //???
+  padding-left: 240px;
 
   .pull-left {
     float: left;
@@ -54,12 +57,12 @@ body {
 
      a, span {
        text-decoration: none;
-       font-family: proxima-nova-condensed;
+       font-family: $primary-font;
        text-transform: uppercase;
-      color: $header-nav-link-color;
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 22px;
+       color: $primary-text-color;
+       font-size: 14px;
+       font-weight: 600;
+       line-height: 22px;
      }
 
      span {
@@ -73,9 +76,9 @@ body {
 
      a {
        text-decoration: none;
-       font-family: proxima-nova-condensed;
+       font-family: $primary-font;
        text-transform: uppercase;
-      color: $header-nav-link-color;
+      color: $primary-text-color;
       font-size: 14px;
       font-weight: 600;
       line-height: 22px;
@@ -85,7 +88,7 @@ body {
        content: '';
       display: inline-block;
       background-repeat: no-repeat;
-      background-color: $header-nav-icon-bg-color;
+      background-color: $primary-green;
       background-position:50% 50%;
       width: 38px;
       height: 38px;
@@ -130,11 +133,11 @@ header {
   background-size: cover;
   background-position: center;
   height: 255px;
-  padding: 80px 0 0 330px; //???
+  padding: 80px 0 0 330px;
 
   h1 {
     margin: 0;
-    font-family: proxima-nova-condensed;
+    font-family: $primary-font;
     text-transform: uppercase;
     color: $header-font-color;
     font-size: 5.936em;
@@ -143,7 +146,7 @@ header {
 
   p {
     margin: 0;
-    font-family: adelle;
+    font-family: $secondary-font;
     color: $header-secondary-font-color;
     font-size:  1.375em; 
     font-style: italic;
@@ -167,7 +170,7 @@ header {
   background-size: 100% 80%;
   background-position: 1% 150%;
   margin: 17px 0 0 17px;
-  font-family: proxima-nova-condensed;
+  font-family: $primary-font;
 
   ul {
     list-style: none;
@@ -228,8 +231,8 @@ header {
       text-transform: uppercase;
       vertical-align: middle;
       width: 99px;
-      font-family: proxima-nova-condensed;
-      color: #6d645e;
+      font-family: $primary-font;
+      color: $primary-text-color;
       font-size: 0.78em;
       font-weight: 600;
       line-height: 1.618;
@@ -239,7 +242,7 @@ header {
   }
 
   .small-menu {
-    display: none;
+    //display: none;
     input {
       margin: 0 15px 0;
        padding: 0 10px 0;
@@ -263,7 +266,7 @@ header {
         content: '';
         display: inline-block;
         background-repeat: no-repeat;
-        background-color: $header-nav-icon-bg-color;
+        background-color: $primary-green;
         background-position:50% 50%;
         width: 38px;
         height: 38px;
@@ -288,7 +291,7 @@ header {
 .content-container {
   margin-left: 240px;
   margin-top: 50px;
-  font-family: adelle;
+  font-family: $secondary-font;
   // 2 column layout
   display: -ms-flex;
   display: -webkit-flex;
@@ -299,9 +302,9 @@ header {
     margin-right: 50px;
 
     h2 {
-      color: $h2-color;
+      color: $primary-text-color;
       text-transform: uppercase;
-      font-family: proxima-nova-condensed;
+      font-family: $primary-font;
       font-size: 1.499em;
     }
 
@@ -309,7 +312,7 @@ header {
       font-size: 0.874em;
       font-weight: 400;
       line-height: 1.716;
-      color: $main-text-color;
+      color: $primary-text-color;
     }
   }
   .content-right {
@@ -317,7 +320,7 @@ header {
     margin-top: 75px;
 
     .image-tagline {
-      font-family: adelle;
+      font-family: $secondary-font;
       color: $image-tagline-text-color;
       font-size: 1em;
       font-style: italic;
@@ -338,14 +341,14 @@ header {
 
     h3 {
       width: 324px;
-      color: $h3-color;
-      font-family: proxima-nova-condensed;
+      color: $primary-text-color;
+      font-family: $primary-font;
       font-size: 1.125em;
       font-weight: 600;
       line-height: 1.222; 
       text-align: center;
       text-transform: uppercase;
-      border-bottom: 1px solid $h3-color;
+      border-bottom: 1px solid $primary-text-color;
       margin: 0 auto;
     }
 
@@ -385,8 +388,8 @@ header {
       }
 
       h4 {
-        color: $h4-color;
-        font-family: proxima-nova-condensed;
+        color: $primary-green;
+        font-family: $primary-font;
         text-transform: uppercase;
         font-size: 1.374em; 
         line-height: 1; 
@@ -395,8 +398,8 @@ header {
       }
 
       span {
-        font-family: adelle;
-        color: $span-color;
+        font-family: $secondary-font;
+        color: $primary-text-color;
         font-size: 0.813em;
         font-weight: 400;
         line-height: 1.692; 
@@ -426,7 +429,7 @@ footer {
     li {
       display: inline-block;
       list-style: none;
-      font-family: proxima-nova-condensed;
+      font-family: $primary-font;
       font-size: 1em;
       font-weight: 600;
       line-height: 1.375; 
@@ -464,7 +467,7 @@ footer {
   }
 
   p {
-    font-family: adelle;
+    font-family: $secondary-font;
     color: $copyright-text-color;
     font-size: 0.75em; 
     font-style: italic;

@@ -1,11 +1,11 @@
 $(function(){
+
   var nav_height = $('nav').height();
 
   // before any scrolling see where page is at
   var initial_pos = $(window).scrollTop();
 
   if(initial_pos > nav_height) {
-    console.log("SHOULD SHOW SMALL MENU!!");
     // display small menu
     $('.small-menu').show();
     $('.subscribe').hide();
@@ -27,7 +27,7 @@ $(function(){
     else {
       $('.small-menu').fadeOut(500, function() {
          $('.subscribe').fadeIn(500);
-      });    
+      });
     }
   });
 });
