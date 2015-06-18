@@ -1,33 +1,32 @@
 $(function(){
 
-  var nav_height = $('nav').height();
+  var timer = null;
+  var navHeight = $('nav').height();
+  var $window = $(window);
+  var $subscribe = $('.subscribe')
+  var $smallMenu = $('.small-menu')
 
-  // before any scrolling see where page is at
-  var initial_pos = $(window).scrollTop();
-
-  if(initial_pos > nav_height) {
-    // display small menu
-    $('.small-menu').show();
-    $('.subscribe').hide();
-  }
-  else {
-    // display subscribe
-    $('.small-menu').hide();
-    $('.subscribe').show();
-  }
-
-  $(window).scroll(function () {
-    var cur_pos = $(window).scrollTop();
-
-    if (cur_pos > nav_height){
-      $('.subscribe').fadeOut(500, function() {
-         $('.small-menu').fadeIn(500);
-      });
+  $window.scroll(function () {
+    // Clear Timeout if one is pending
+    if(timer) {
+      clearTimeout(timer);
+      timer = null;
     }
-    else {
-      $('.small-menu').fadeOut(500, function() {
-         $('.subscribe').fadeIn(500);
-      });
-    }
+    // Set Timeout
+    timer = setTimeout(function(){
+      onScroll();
+    }, 250); 
   });
+
+  function onScroll() {
+    timer = null;
+    var top_offset = $window.scrollTop();
+    if (top_offset > navHeight) {
+       $subscribe.addClass('hidden');
+       $smallMenu.removeClass('hidden');
+    } else {
+       $smallMenu.addClass('hidden');
+       $subscribe.removeClass('hidden');
+    }
+  }
 });

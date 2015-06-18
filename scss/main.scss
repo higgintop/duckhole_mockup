@@ -221,7 +221,7 @@ header {
   }
 
   .small-menu {
-    display: none;
+    //display: none;
 
     input {
       background:  url('../img/search-icon.png') 95% 50% no-repeat, linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
@@ -258,6 +258,10 @@ header {
         background-image: url('../img/cart-icon.png');
       }
     }
+  }
+
+  .hidden {
+    display: none;
   }
 }
 
